@@ -2,5 +2,5 @@
 tests/
 mount.octoprint
 # Sample projects
-projects/
+projects.test/
 
