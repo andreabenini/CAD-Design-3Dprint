@@ -1,0 +1,1 @@
+Ender 3 V2 V-Slot Covers by RedSoda on Thingiverse: https://www.thingiverse.com/thing:4579489
