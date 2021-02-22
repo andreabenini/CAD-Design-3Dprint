@@ -11,9 +11,10 @@
 // Parameters
 
 // Spool Hole Diameter
-spool_hole_diam = 53.5;     // [40.0:60.0]
+spool_hole_diam = 53.5;     // [40.0:60.0] 53.5 Small, 72.0 Big
+
 // Internal Spool Thickness
-spool_wall_thickness=10;    // [5.0:12.0]
+spool_wall_thickness=10;    // [5.0:12.0]  10   Small, 18 Big Reel
 
 // Bearing shape [inner, outer, height]
 // 608zz = 8x22x7, radius 11.1
