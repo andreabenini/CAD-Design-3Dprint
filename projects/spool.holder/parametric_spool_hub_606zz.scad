@@ -11,7 +11,7 @@
 // Parameters
 
 // Spool Hole Diameter
-spool_hole_diam = 53.5;     // [40.0:60.0] 53.5 Small, 72.0 Big
+spool_hole_diam = 53.5;     // [40.0:60.0] 53.5 Small, 72.5 Big
 
 // Internal Spool Thickness
 spool_wall_thickness=10;    // [5.0:12.0]  10   Small, 18 Big Reel
@@ -80,10 +80,10 @@ module new_hub() {
             
             // torus-shaped reinforcement
             difference() {
-                translate([0,0,3.4])
-                rotate_extrude(convexity = 10, $fn=64)
-                translate([bearingRadius+4.3, 0, 0])
-                circle(r = 2, $fn=16);
+                translate([0, 0, 3.4])
+                rotate_extrude(convexity=10, $fn=64)
+                translate([bearingRadius+5, 1, 0])
+                circle(r=4.1, $fn=26);
                 cutouts();
             }
             
