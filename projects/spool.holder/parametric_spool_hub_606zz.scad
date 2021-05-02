@@ -8,13 +8,13 @@
 //-- GPLV3
 
 
-// Parameters
+// Program Parameters
 
 // Spool Hole Diameter
-spool_hole_diam = 53.5;     // [40.0:60.0] 53.5 Small, 72.5 Big
+spool_hole_diam = 58.0;     // [40.0:60.0] 53.5 Small, 58.0 Medium, 72.5 Big
 
 // Internal Spool Thickness
-spool_wall_thickness=10;    // [5.0:12.0]  10   Small, 18 Big Reel
+spool_wall_thickness=18;    // [5.0:12.0]  10   Small, 18 Big Reel
 
 // Bearing shape [inner, outer, height]
 // 608zz = 8x22x7, radius 11.1
@@ -22,6 +22,8 @@ spool_wall_thickness=10;    // [5.0:12.0]  10   Small, 18 Big Reel
 bearingHeight = 6;          // bearing height
 bearingRadius = 8.6;        // bearing radius with tolerance for insertion
 
+
+// DO NOT TOUCH ANYTHING BELOW IF YOU DON'T KNOW WHAT YOU'RE DOING
 
 /* [Hidden] */
 //-- the rest are not adjustable
