@@ -4,4 +4,5 @@ mount.octoprint
 jobs/
 # Sample projects
 projects.test/
-
+# tmp files
+*.ods#
