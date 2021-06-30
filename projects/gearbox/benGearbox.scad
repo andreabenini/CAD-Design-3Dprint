@@ -22,9 +22,9 @@ addendum_adjustment=1.4;
 // part can be: [sun, intcarrier, finalcarrier, planet, housing, motor, cover]
 // print_parts(part="sun", stages=1);
 // print_parts(part="planet", stages=1);
-print_parts(part="housing", stages=1);
+// print_parts(part="housing", stages=1);
 // print_parts(part="motor", stages=1);
-// print_parts(part="cover", stages=1);
+print_parts(part="cover", stages=1);
 // print_parts(part="intcarrier", stages=1);
 // print_parts(part="finalcarrier", stages=1);
 
@@ -271,7 +271,7 @@ module housing(motor_size=42, housing_teeth=32, pitch=0.865, pressure_angle=pres
 }
 /**/
 
-module cover(thickness=8, motor_size=42, bolt_spacing=33, bolt_size=3, bearing_diam=17, bearing_thickness=6, output_hole_diam=9.5, stickout=1, bolt_relief_depth=4, bolt_relief_ID=25, bolt_relief_OD=35) {
+module cover(thickness=8, motor_size=42, bolt_spacing=33, bolt_size=3, bearing_diam=15, bearing_thickness=6, output_hole_diam=10, stickout=1, bolt_relief_depth=4, bolt_relief_ID=25, bolt_relief_OD=35) {
     difference() {
         intersection() {
             union() {
@@ -282,11 +282,14 @@ module cover(thickness=8, motor_size=42, bolt_spacing=33, bolt_size=3, bearing_d
         }
         translate([0,0,-extra/2]) difference() {
             cylinder(r=bolt_relief_OD/2, h=bolt_relief_depth);
-            translate([0,0,-extra/2]) cylinder(r=bolt_relief_ID/2, h=bolt_relief_depth+extra);
+            // inner cylinder
+            translate([0,0,-extra/2]) cylinder(r1=bolt_relief_ID/2-4, r2=bolt_relief_ID/2, h=bolt_relief_depth+extra);
         }
+        // Through hole
         translate([0,0,-extra/2]) cylinder(r=output_hole_diam/2,h=thickness+extra);
+        // Inner hole near through hole
         translate([0,0,-extra]) cylinder(r=bearing_diam/2, h=bearing_thickness+extra);
-
+        // Four bolts holes
         for (xnum=[-1,1]) for (ynum=[-1,1])
             translate([xnum*bolt_spacing/2,ynum*bolt_spacing/2,-extra/2]) cylinder(r=bolt_size/2, h=thickness+extra, $fs=circle_precision);
 
