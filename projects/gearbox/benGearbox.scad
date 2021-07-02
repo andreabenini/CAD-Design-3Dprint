@@ -24,9 +24,9 @@ addendum_adjustment=1.4;
 // print_parts(part="planet", stages=1);
 // print_parts(part="housing", stages=1);
 // print_parts(part="motor", stages=1);
-print_parts(part="cover", stages=1);
+// print_parts(part="cover", stages=1);
 // print_parts(part="intcarrier", stages=1);
-// print_parts(part="finalcarrier", stages=1);
+print_parts(part="finalcarrier", stages=1);
 
 
 //singleprint();
@@ -323,29 +323,51 @@ module sun( pitch=0.865, teeth=8, gear_thickness=11, gear_height=8, bore_diam=5.
 }
 /**/
 
-module carrier(thickness=6,num_planets=3, planet_teeth=12, sun_teeth=8, pitch=0.865, nut_diam=10, nut_thickness=2.75, planet_bolt_diam=3, output_diam=6, output_head_size=10, head_height=4.5, final=true, teeth=8, gear_thickness=11, pitch=0.865, pressure_angle=pressure_angle) {
+module carrier(thickness=3, num_planets=3, planet_teeth=12, sun_teeth=8, pitch=0.865, nut_diam=10, nut_thickness=2.75, 
+               planet_bolt_diam=3, output_diam=6, output_head_size=10, head_height=4.5, final=true, teeth=8, gear_thickness=11,
+               pitch=0.865, pressure_angle=pressure_angle) {
     orbit_radius=((planet_teeth+sun_teeth)/pitch)/2;
+
 
     difference() {
         union() {
-            cylinder(r=orbit_radius+nut_diam/2+1,h=thickness, $fs=circle_precision);
+            // Base plate
+            cylinder(r=orbit_radius+nut_diam/2+1, h=thickness-1, $fs=circle_precision);
+            // ball bearing crown, lower part cylinder
+            translate([0, 0, 2]) {
+                cylinder(r1=orbit_radius/2+2,
+                         r2=orbit_radius/2,
+                         h=thickness);
+            }
+            // ball bearing crown, upper part cylinder
+            translate([0, 0, thickness+2]) {
+                cylinder(r1=orbit_radius/2, r2=5,
+                        //  r2=output_diam/2,
+                        h=1);
+            }
+            // Gear on NOT final piece
             if (!final) {
                 translate([0,0,thickness]) gear(number_of_teeth=teeth, diametral_pitch=pitch, hub_diameter=0, hub_thickness=gear_thickness, bore_diameter=0, rim_thickness=gear_thickness,
                                                 rim_width=0, gear_thickness=gear_thickness, clearance=clearance, backlash=backlash, pressure_angle=pressure_angle);
             }
         }
+        // Planets
         for (planetnum=[1:num_planets]) {
             rotate([0,0,(360/num_planets)*(planetnum-1)])
                 translate([orbit_radius,0,-extra/2]) {
+                    // Holes
                     cylinder(r=planet_bolt_diam/2,h=thickness+extra, $fs=circle_precision);
-                    translate([0,0,thickness-nut_thickness]) cylinder(r=nut_diam/2, h=nut_thickness+extra);
+                    // Dig around holes
+                    // translate([0,0,thickness-nut_thickness]) cylinder(r=nut_diam/2, h=nut_thickness+extra);
                 }
         }
+        // Bolt head
         if (final) {
             translate([0,0,-extra/2]) cylinder(r=output_head_size/2*1.15, h=head_height+extra, $fn=6);
         }
+        // Bolt hole
         translate([0,0,-extra/2]) cylinder(r=output_diam/2, h=thickness+gear_thickness+extra, $fs=circle_precision);
     }
-/**/
 
 }
+/**/
