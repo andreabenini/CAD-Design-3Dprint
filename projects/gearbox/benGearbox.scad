@@ -20,13 +20,13 @@ addendum_adjustment=1.4;
 
 //test();
 // part can be: [sun, intcarrier, finalcarrier, planet, housing, motor, cover]
-// print_parts(part="sun", stages=1);
+print_parts(part="sun", stages=1);
 // print_parts(part="planet", stages=1);
 // print_parts(part="housing", stages=1);
 // print_parts(part="motor", stages=1);
 // print_parts(part="cover", stages=1);
 // print_parts(part="intcarrier", stages=1);
-print_parts(part="finalcarrier", stages=1);
+// print_parts(part="finalcarrier", stages=1);
 
 
 //singleprint();
