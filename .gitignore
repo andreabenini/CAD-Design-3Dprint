@@ -4,3 +4,5 @@ jobs/
 projects.test/
 # tmp files
 *.ods#
+# Display Project Tests
+display.interface/
