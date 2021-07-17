@@ -4,5 +4,6 @@ jobs/
 projects.test/
 # tmp files
 *.ods#
+.vscode/
 # Display Project Tests
 display.interface/
