@@ -9,4 +9,3 @@ https://www.youtube.com/watch?v=F6BCra3vW_k&feature=youtu.be
 
 # Beginner links
 https://www.creality3dofficial.com/blogs/news/ultimate-3d-printing-beginners-guide
-
