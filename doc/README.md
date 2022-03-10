@@ -21,3 +21,7 @@
     I'm aware of it but sometimes it is useful to make few inspections on the working project
     without relying on external tools like Blender. 
     This is just a dirty hack but seems to do that job well.
+
+# Useful links
+- https://www.thingiverse.com/  
+  The mother of all 3D models websites
