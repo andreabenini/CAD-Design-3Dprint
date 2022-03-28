@@ -11,6 +11,9 @@
     http://diy3dprinting.blogspot.com/2014/09/collection-of-blender-3d-printing.html  
     A collection of tutorial videos I found you may find also useful.
     Expecially targeted to 3d printing and basic design skills required to do that.
+- Simplyfy Mesh  
+    https://all3dp.com/2/blender-simplify-mesh-simply-explained/  
+    Good hints when simplify meshes are needed or when non manifold problems appears
 
 
 # OpenSCAD resources
