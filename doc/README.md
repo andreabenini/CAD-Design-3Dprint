@@ -16,15 +16,6 @@
     Good hints when simplify meshes are needed or when non manifold problems appears
 
 
-# OpenSCAD resources
-- OpenSCAD Measurement tool  
-    https://www.thingiverse.com/thing:280469  
-    OpenSCAD is a good design tool but it totally misses measurement functions because
-    it wasn't created for that.  
-    I'm aware of it but sometimes it is useful to make few inspections on the working project
-    without relying on external tools like Blender. 
-    This is just a dirty hack but seems to do that job well.
-
 # Useful links
 - https://www.thingiverse.com/  
   The mother of all 3D models websites
