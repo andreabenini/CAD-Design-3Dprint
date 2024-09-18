@@ -5,8 +5,10 @@ ready for being freely modified
 - Import the file in a workspace
 - **Mesh** workspace
     - Click on the imported object
-    - **Mesh / Analize / Check Solid Mesh** option
+    - **Meshes / Analize / Check Solid Mesh** option
     - if the mesh is accepted as a solid and valid mesh we can continue
+    - if a problem arises you can use the mesh repair utility, it's not powerful but still way better than fixing meshes manually.  
+      **Meshes / Analize / Evaluate and Repair Mesh** option. A nice utility runs several tests on it to fix whatever is possible
 - **Part** workspace
     - Select the desired object
     - **Part / Create shape from mesh** option
@@ -21,4 +23,3 @@ ready for being freely modified
    - Select the object and go to the **Part Design** workspace
    - **Part Design / Create body** option
    - A new Object body will be created from it
-
