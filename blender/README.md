@@ -18,6 +18,7 @@ Here are few nice examples for it:
 - https://www.youtube.com/watch?v=ZYYkdNhfMhw
 - https://www.youtube.com/watch?v=fVOYv8HdMxI
 
-
-
-## Select loops - Edge Loops
+But this is the best video ever made for it, it does **NOT** use knife or bisect tools and instead it's focused
+on using planes objects or thin cubes. You can bisect your object according to your needs and let it be ready
+for physical printing and assembling later on:
+- https://www.youtube.com/watch?v=j5at2x0CcX8
