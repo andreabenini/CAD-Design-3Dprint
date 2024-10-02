@@ -42,4 +42,3 @@ Brief summary and ideas:
   will be created from the original. Use the _eye/visible icon_ to see them accordingly
 - Exit from _edit mode_
 
-
