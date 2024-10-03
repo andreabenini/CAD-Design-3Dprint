@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gamecontroller configversion="19" appversion="3.4.0">
+<!--
+    AntiMicroX configuration file for blender
+    https://github.com/AntiMicroX/antimicrox
+
+    Blender         v4.2.1 LTS
+    AntiMicroX      v3.4.0
+
+    Mapping keyboard and mouse for blender modeling is totally awesome [Ben]
+-->
     <!--The SDL name for a joystick is included for informational purposes only.-->
     <sdlname>PS4 Controller</sdlname>
     <!--The Unique ID for a joystick is included for informational purposes only.-->
